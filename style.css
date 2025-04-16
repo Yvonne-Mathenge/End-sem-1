@@ -1,0 +1,185 @@
+/* Base Styles */
+:root {
+    --primary-color: #003366; /* USIU blue */
+    --secondary-color: #E57200; /* USIU orange */
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --error-color: #d32f2f;
+    --success-color: #388e3c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Calculator Container */
+.calculator-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.calculator-container h1 {
+    color: var(--primary-color);
+    margin-top: 0;
+    text-align: center;
+}
+
+.calculator-container p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-gray);
+}
+
+/* Form Styles */
+#gpa-form {
+    margin-bottom: 2rem;
+}
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Button Styles */
+.buttons-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #002b52;
+}
+
+.btn.secondary {
+    background-color: var(--medium-gray);
+    color: var(--dark-gray);
+}
+
+.btn.secondary:hover {
+    background-color: #d0d0d0;
+}
+
+/* Result Container */
+.result-container {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.result-container h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.gpa-result {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.gpa-message {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin-bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .course-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .input-group {
+        min-width: 100%;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
