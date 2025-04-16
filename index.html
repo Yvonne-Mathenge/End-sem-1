@@ -5,82 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USIU-Africa GPA Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="calculator-container">
-        <h1>USIU-Africa GPA Calculator</h1>
-        <p>Enter your course information to estimate your GPA</p>
-        
-        <form id="gpa-form">
-            <div class="courses-container" id="courses-container">
-                <!-- Initial course rows -->
-                <div class="course-row">
-                    <div class="input-group">
-                        <label for="course1">Course Name</label>
-                        <input type="text" id="course1" class="course-name" placeholder="e.g. COMP 101" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="grade1">Grade</label>
-                        <select id="grade1" class="course-grade" required>
-                            <option value="">Select grade</option>
-                            <option value="4">A</option>
-                            <option value="3">B</option>
-                            <option value="2">C</option>
-                            <option value="1">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </div>
+    <div class="background-wrapper">
+        <main class="calculator-container">
+            <header class="calculator-header">
+                <img src="https://via.placeholder.com/60x60" alt="USIU-Africa Logo" class="logo">
+                <div>
+                    <h1>USIU-Africa GPA Calculator</h1>
+                    <p class="subtitle">Estimate your semester GPA with ease</p>
                 </div>
-                
-                <div class="course-row">
-                    <div class="input-group">
-                        <label for="course2">Course Name</label>
-                        <input type="text" id="course2" class="course-name" placeholder="e.g. MATH 120" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="grade2">Grade</label>
-                        <select id="grade2" class="course-grade" required>
-                            <option value="">Select grade</option>
-                            <option value="4">A</option>
-                            <option value="3">B</option>
-                            <option value="2">C</option>
-                            <option value="1">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="course-row">
-                    <div class="input-group">
-                        <label for="course3">Course Name</label>
-                        <input type="text" id="course3" class="course-name" placeholder="e.g. ENGL 101" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="grade3">Grade</label>
-                        <select id="grade3" class="course-grade" required>
-                            <option value="">Select grade</option>
-                            <option value="4">A</option>
-                            <option value="3">B</option>
-                            <option value="2">C</option>
-                            <option value="1">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            </header>
             
-            <div class="buttons-container">
-                <button type="button" id="add-course" class="btn secondary">+ Add Another Course</button>
-                <button type="submit" id="calculate" class="btn primary">Calculate GPA</button>
+            <form id="gpa-form">
+                <div class="courses-container" id="courses-container">
+                    <!-- Initial course rows -->
+                    <div class="course-row">
+                        <div class="input-group">
+                            <label for="course1">Course Name</label>
+                            <input type="text" id="course1" class="course-name" placeholder="e.g. COMP 101" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="grade1">Grade</label>
+                            <div class="select-wrapper">
+                                <select id="grade1" class="course-grade" required>
+                                    <option value="">Select grade</option>
+                                    <option value="4">A</option>
+                                    <option value="3">B</option>
+                                    <option value="2">C</option>
+                                    <option value="1">D</option>
+                                    <option value="0">F</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-row">
+                        <div class="input-group">
+                            <label for="course2">Course Name</label>
+                            <input type="text" id="course2" class="course-name" placeholder="e.g. MATH 120" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="grade2">Grade</label>
+                            <div class="select-wrapper">
+                                <select id="grade2" class="course-grade" required>
+                                    <option value="">Select grade</option>
+                                    <option value="4">A</option>
+                                    <option value="3">B</option>
+                                    <option value="2">C</option>
+                                    <option value="1">D</option>
+                                    <option value="0">F</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-row">
+                        <div class="input-group">
+                            <label for="course3">Course Name</label>
+                            <input type="text" id="course3" class="course-name" placeholder="e.g. ENGL 101" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="grade3">Grade</label>
+                            <div class="select-wrapper">
+                                <select id="grade3" class="course-grade" required>
+                                    <option value="">Select grade</option>
+                                    <option value="4">A</option>
+                                    <option value="3">B</option>
+                                    <option value="2">C</option>
+                                    <option value="1">D</option>
+                                    <option value="0">F</option>
+                                </select>
+                                <span class="select-arrow">▼</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button type="button" id="add-course" class="btn secondary">
+                        <span class="btn-icon">+</span> Add Another Course
+                    </button>
+                    <button type="submit" id="calculate" class="btn primary">
+                        <span class="btn-icon">⎈</span> Calculate GPA
+                    </button>
+                </div>
+            </form>
+            
+            <div id="result-container" class="result-container hidden">
+                <div class="result-card">
+                    <h2>Your GPA Result</h2>
+                    <div class="gpa-circle">
+                        <span id="gpa-result" class="gpa-result">0.00</span>
+                    </div>
+                    <p id="gpa-message" class="gpa-message"></p>
+                    <div class="grade-scale">
+                        <h3>Grade Scale</h3>
+                        <ul class="scale-list">
+                            <li><span class="grade-letter">A</span> = 4.0</li>
+                            <li><span class="grade-letter">B</span> = 3.0</li>
+                            <li><span class="grade-letter">C</span> = 2.0</li>
+                            <li><span class="grade-letter">D</span> = 1.0</li>
+                            <li><span class="grade-letter">F</span> = 0.0</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </form>
-        
-        <div id="result-container" class="result-container hidden">
-            <h2>Your GPA Result</h2>
-            <p id="gpa-result" class="gpa-result">0.00</p>
-            <p id="gpa-message" class="gpa-message"></p>
-        </div>
-    </main>
+        </main>
+    </div>
     
     <script src="script.js"></script>
 </body>
